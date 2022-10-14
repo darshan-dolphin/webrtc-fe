@@ -73,7 +73,7 @@ export const RoomProvider = ({ children }: { children: React.ReactNode }) => {
           audio: true,
         });
 
-        // console.log("_dp stream", st);
+        console.log("_dp stream", st);
 
         setStream(st);
       } catch (error) {
@@ -112,7 +112,7 @@ export const RoomProvider = ({ children }: { children: React.ReactNode }) => {
       ws.off("user-stopped-sharing");
       ws.off("user-joined");
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
