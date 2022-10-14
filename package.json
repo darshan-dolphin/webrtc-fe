@@ -26,7 +26,7 @@
     "tailwindcss": "^3.0.24"
   },
   "scripts": {
-    "start": "yarn run serve",
+    "start": "npm run serve",
     "localstart": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
