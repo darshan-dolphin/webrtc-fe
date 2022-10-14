@@ -8,8 +8,8 @@ import { addPeerAction, removePeerAction } from "./peerActions";
 
 // const WS = "http://192.168.4.97:8080";
 // const WS = "http://192.168.4.153:8080";
-// const WS = "https://05b5-122-169-118-120.ngrok.io";
-const WS = "https://webrtc-d.herokuapp.com";
+const WS = "https://b0d6-122-169-118-120.ngrok.io";
+// const WS = "https://webrtc-d.herokuapp.com";
 // const WS = "http://122.169.118.120";
 
 export const RoomContext = createContext<null | any>(null);
@@ -88,14 +88,15 @@ export const RoomProvider = ({ children }: { children: React.ReactNode }) => {
 
     let localstream: MediaStream | null;
 
-    askPermission().then((response) => {
-      localstream = response;
-    });
-    // .then(() => {
-    //   localstream?.getTracks().forEach((track) => {
-    //     track.stop();
-    //   });
-    // });
+    askPermission()
+      .then((response) => {
+        localstream = response;
+      })
+      .then(() => {
+        localstream?.getTracks().forEach((track) => {
+          track.stop();
+        });
+      });
 
     ws.on("room-created", enterRoom);
     ws.on("get-users", getUsers);
