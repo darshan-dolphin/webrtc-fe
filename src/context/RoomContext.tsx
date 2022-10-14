@@ -112,6 +112,7 @@ export const RoomProvider = ({ children }: { children: React.ReactNode }) => {
       ws.off("user-stopped-sharing");
       ws.off("user-joined");
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
