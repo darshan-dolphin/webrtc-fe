@@ -30,4 +30,4 @@ jobs:
         # uses: CultureHQ/actions-yarn@661c6f3a66041c2432bcfb78096b9207304614c8
         uses: CultureHQ/actions-yarn@v1.0.1
 
-      - run: yarn install
+      - run: yarn run serve
